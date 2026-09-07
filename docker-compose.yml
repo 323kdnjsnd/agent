@@ -1,0 +1,14 @@
+services:
+  mining-daily-agent:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      LIVE_DATA: "false"
+      HTTP_TIMEOUT_SECONDS: "12"
+      MAX_PDF_BYTES: "25000000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5

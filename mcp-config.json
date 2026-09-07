@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "mining-news-mcp": {
+      "command": "D:/mcp-agent/.venv/Scripts/python.exe",
+      "args": ["-m", "mcp_agent.servers.mining_news"],
+      "cwd": "D:/mcp-agent",
+      "env": {
+        "PYTHONPATH": "D:/mcp-agent/src",
+        "LIVE_DATA": "false"
+      }
+    },
+    "mineral-pdf-mcp": {
+      "command": "D:/mcp-agent/.venv/Scripts/python.exe",
+      "args": ["-m", "mcp_agent.servers.mineral_pdf"],
+      "cwd": "D:/mcp-agent",
+      "env": {
+        "PYTHONPATH": "D:/mcp-agent/src",
+        "LIVE_DATA": "false"
+      }
+    },
+    "lme-price-mcp": {
+      "command": "D:/mcp-agent/.venv/Scripts/python.exe",
+      "args": ["-m", "mcp_agent.servers.lme_price"],
+      "cwd": "D:/mcp-agent",
+      "env": {
+        "PYTHONPATH": "D:/mcp-agent/src",
+        "LIVE_DATA": "false"
+      }
+    }
+  }
+}
